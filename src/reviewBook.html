@@ -1,0 +1,11 @@
+<template>
+    <section class="au-animate">
+        <h2> Book: ${book.title}</h2>
+        <form role="form" submit.delegate="submit()">
+            <div class="button-bar">
+                <button class="btn btn-success" click.delegate="read()">Read</button>
+                <button class="btn btn-success" click.delegate="purchase()">Purchase</button>
+            </div>
+        </form>
+    </section>
+</template>

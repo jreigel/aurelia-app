@@ -1,0 +1,39 @@
+<!--Slide 10-->
+
+<template>
+  <section class="au-animate" >
+    <h2 class="text-center">Book: ${book.title}</h2>
+    <!--TODO: Test & fix css-->
+    <div class="container">
+
+    <table class="table-bordered col-sm-4">
+        <tr>
+            <th>Available on</th>
+            <th>Price </th>
+        </tr>
+        <!-- Inside repeat? class="list-group-item ${contact.id === $parent.selectedId ? 'active' : ''}"-->
+      <tr repeat.for="provider of providers" >
+        <!--<a route-href="route: contacts; params.bind: {id:contact.id}" click.delegate="$parent.select(contact)">
+          <h4 class="list-group-item-heading">${contact.firstName} ${contact.lastName}</h4>
+          <p class="list-group-item-text">${contact.email}</p>
+          </a>-->
+          <td>${provider.name}</td>
+          <td>${provider.price}</td>
+        </a>
+      </tr>
+    </table>
+    <div class="col-sm-4"></div>
+
+    <table class="table-bordered col-sm-4">
+        <tr>
+            <th> Best place to buy</th>
+            <th> Price</th>
+        </tr>
+        <tr>
+            <td> ${bestProvider}</td>
+            <td> ${bestProvider.price}</td>
+        </tr>
+    </table>
+    </div>
+  </section>
+</template>

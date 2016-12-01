@@ -1,0 +1,12 @@
+<template>
+  <section class="au-animate">
+    <h2> Lets get started!</h2>
+    <form role="form" submit.delegate="submit()">
+      <div class="form-group">
+        <label for="fn">What do you want to read?</label>
+        <input type="text" value.bind="desiredGenre" class="form-control" id="fn" placeholder="desired Reading">
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+  </section>
+</template>

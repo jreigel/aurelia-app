@@ -1,0 +1,29 @@
+<template>
+    <!--TODO: Estimated hardest controller, get from API/db, dynamically update books from search field, plot when selecting a book-->
+    <section class="au-animate">
+        <h2> ${book.title} </h2>
+        <div class="text-left col-sm-4">
+            <h1>Plot</h1>
+            <!--TODO: Plot only for the selected book, look at contact-details-->
+            <p>${selectedBook.plot}</p>
+        </div>
+
+
+        <div class="col-sm-4" style="width:auto;">
+            <input value="Genre"></input>
+            <ul class="list-group">
+
+                <!--class="list-group-item ${contact.id === $parent.selectedId ? 'active' : ''}"-->
+                <li class="list-group-item" style="height:30px;" repeat.for="book of books">
+                    <!--<a route-href="route: contacts; params.bind: {id:contact.id}" click.delegate="$parent.select(contact)">-->
+                    <!--<h4 class="list-group-item-heading">${contact.firstName} ${contact.lastName}</h4>-->
+                    <!--<p class="list-group-item-text">${contact.email}</p>
+          </a>-->
+                    <a route-href="route: reviewBook; params.bind: {id:book.title}">${book.title}</a>
+                    <!--<p class="list-group-item-text;">${book.title}</p>-->
+                        <!--TODO: Look at above code, add a href when book is selected, change book.plot accordingly-->
+                </li>
+            </ul>
+        </div>
+    </section>
+</template>
